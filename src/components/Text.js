@@ -3,7 +3,7 @@ import { Text as RNText, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import Colors, { colorsProps } from 'themes/colors';
 import {
-  fontSizes, fontWeights, fontSizesProps, fontWeightsProps,
+  fontSizes, fontFamilies, fontSizesProps, fontWeightsProps, fontFamiliesProps,
 } from 'themes/fonts';
 
 const styles = StyleSheet.create({
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 const Text = (props) => {
   const {
-    style, children, centered, flex, size, weight, color, ...otherProps
+    style, children, centered, flex, size, weight, family, color, ...otherProps
   } = props;
 
   return (
@@ -29,7 +29,7 @@ const Text = (props) => {
         {
           color: Colors[color],
           fontSize: fontSizes[size],
-          fontWeight: fontWeights[weight],
+          fontFamily: fontFamilies[family][weight],
         },
         style,
       ]}
@@ -46,6 +46,7 @@ Text.propTypes = {
   centered: PropTypes.bool,
   flex: PropTypes.bool,
   weight: PropTypes.oneOf(fontWeightsProps),
+  family: PropTypes.oneOf(fontFamiliesProps),
   size: PropTypes.oneOf(fontSizesProps),
   color: PropTypes.oneOf(colorsProps),
 };
@@ -56,6 +57,7 @@ Text.defaultProps = {
   centered: false,
   flex: false,
   weight: 'regular',
+  family: 'notosans',
   size: 'regular',
   color: 'black',
 };

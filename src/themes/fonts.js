@@ -10,13 +10,16 @@ export const fontSizes = {
   xxxlarge: normalize(20),
 };
 
-export const fontWeights = {
-  thin: '300',
-  regular: '400',
-  semibold: '600',
-  bold: '700',
-  xbold: '900',
+export const fontFamilies = {
+  notosans: {
+    regular: 'Noto Sans',
+    bold: 'Noto Sans Bold',
+  },
+  roboto: {
+    regular: 'Roboto-Regular',
+  },
 };
 
 export const fontSizesProps = Object.keys(fontSizes).map((key) => key);
-export const fontWeightsProps = Object.keys(fontWeights).map((key) => key);
+export const fontFamiliesProps = Object.keys(fontFamilies).map((key) => key);
+export const fontWeightsProps = Object.keys({ ...fontFamilies.notosans, ...fontFamilies.roboto });
