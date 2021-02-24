@@ -1,4 +1,4 @@
-package com.rnappstarter;
+package com.foodierecipe;
 
 import android.app.Application;
 import android.content.Context;

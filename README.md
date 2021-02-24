@@ -1,4 +1,4 @@
-# RNAppStarter
+# FoodieRecipe
 This is a starter app for React Native with some boilerplate code :p
 - Redux integration (You can add actions, reducers straigt away!)
 - Redux Saga Integration (You can add new saga straight away!)
@@ -35,7 +35,7 @@ npm install
 ## Start
 ```
 npm start
-ios > open RNAppStarter.xcodeproj
+ios > open FoodieRecipe.xcodeproj
 android > open Android Studio
 run
 ```
@@ -47,15 +47,15 @@ run
 2. Open app.json and change the following to new app name
 ```
 {
-  "name": "RNAppStarter",
-  "displayName": "RNAppStarter"
+  "name": "FoodieRecipe",
+  "displayName": "FoodieRecipe"
 }
 ```
-3. At RNAppStarter folder, run the following command
+3. At FoodieRecipe folder, run the following command
 ```
 react-native eject
 ```
-4. It will regenerate new android & ios folder with corresponding name + app identifier (eg. com.rnappstarter)
+4. It will regenerate new android & ios folder with corresponding name + app identifier (eg. com.FoodieRecipe)
 5. Run the following command (important! to link the related packages to native platform)
 ```
 react-native link

@@ -1,8 +1,8 @@
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'RNAppStarter' do
-  # Pods for RNAppStarter
+target 'FoodieRecipe' do
+  # Pods for FoodieRecipe
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,7 +34,7 @@ target 'RNAppStarter' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'RNAppStarterTests' do
+  target 'FoodieRecipeTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -42,10 +42,10 @@ target 'RNAppStarter' do
   use_native_modules!
 end
 
-target 'RNAppStarter-tvOS' do
-  # Pods for RNAppStarter-tvOS
+target 'FoodieRecipe-tvOS' do
+  # Pods for FoodieRecipe-tvOS
 
-  target 'RNAppStarter-tvOSTests' do
+  target 'FoodieRecipe-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
