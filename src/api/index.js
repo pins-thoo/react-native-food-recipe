@@ -6,7 +6,7 @@
 
 // Mock api here, remove it in actual usage
 export const signIn = (credentials) => new Promise((resolve, reject) => {
-  if (credentials.username === 'test' && credentials.password === '1234') {
+  if (credentials.user_email === 'Test@gmail.com' && credentials.user_password === '1234') {
     // mocking api request
     setTimeout(() => {
       const token = 'fake-token';
@@ -16,3 +16,5 @@ export const signIn = (credentials) => new Promise((resolve, reject) => {
     reject(new Error('Invalid credentials'));
   }
 });
+
+export const signUp = (data) => api.post('api/users', data);
